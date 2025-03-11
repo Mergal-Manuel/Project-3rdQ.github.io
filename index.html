@@ -1,9 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Fare Guide</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fare Guide</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 0;
+        }
+
+    .navbar {
+            background-color: #0077b6;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+    .navbar .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+    .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+    .search-box {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+    .search-box input {
+            padding: 5px;
+            font-size: 16px;
+            border: none;
+            outline: none;
+            width: 150px;
+        }
+
+    .search-box button {
+            padding: 5px 10px;
+            font-size: 16px;
+            background-color: #0077b6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 20px auto;
+            width: 80%;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px gray;
+        }
+
+    .train-map {
+            width: 100%;
+            max-width: 400px;
+            margin-right: 20px;
+        }
+
+    .fare-details {
+            flex: 1;
+            text-align: left;
+        }
+
+    select, button {
+            margin: 10px;
+            padding: 10px;
+            display: block;
+            width: 100%;
+        }
+
+    #ticketPrice {
+            font-size: 40px;
+            font-weight: bold;
+            background: navy;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 20px;
+
+    </style>
 </head>
 
 <link rel="stylesheet" type="text/css" href="style.css">
@@ -24,28 +119,68 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Manila_LRT-MRT_map.png" alt="Train Map" class="train-map">
         <div class="fare-details">
             <h1>Fare Guide</h1>
-            <label for="leaving">LEAVING FROM:</label>
-            <select id="leaving">
-                <option value="North Ave">North Ave</option>
-                <option value="Taft">Taft</option>
-                <option value="Cubao">Cubao</option>
-                <option value="Shaw Blvd">Shaw Blvd</option>
-            </select>
+           <label>origin:</label>
+<select id="leaving">
+    <option value="0">North Avenue</option>
+    <option value="0">Quezon Avenue</option>
+    <option value="0">GMA-Kamuning</option>
+    <option value="3">Araneta Center-Cubao</option>
+    <option value="3">Santolan-Annapolis</option>
+    <option value="7">Ortigas</option>
+    <option value="7">Shaw Boulevard</option>
+    <option value="7">Boni Avenue</option>
+    <option value="11">Guadalupe</option>
+    <option value="11">Buendia</option>
+    <option value="11">Ayala</option>
+    <option value="15">Magallanes</option>
+    <option value="15">Taft Avenue</option>
+</select>
+
+<label for="going">Destination:</label>
+<select id="going">
+    <option value="0">North Avenue</option>
+    <option value="0">Quezon Avenue</option>
+    <option value="0">GMA-Kamuning</option>
+    <option value="3">Araneta Center-Cubao</option>
+    <option value="3">Santolan-Annapolis</option>
+    <option value="7">Ortigas</option>
+    <option value="7">Shaw Boulevard</option>
+    <option value="7">Boni Avenue</option>
+    <option value="11">Guadalupe</option>
+    <option value="11">Buendia</option>
+    <option value="11">Ayala</option>
+    <option value="15">Magallanes</option>
+    <option value="15">Taft Avenue</option>
+</select>
             
-            <label for="going">GOING TO:</label>
-            <select id="going">
-                <option value="North Ave">North Ave</option>
-                <option value="Taft">Taft</option>
-                <option value="Cubao">Cubao</option>
-                <option value="Shaw Blvd">Shaw Blvd</option>
-            </select>
-            
-            <button>Regular Fare</button>
-            <button>Discounted Fare</button>
+            <button onclick="Fare()">Regular Fare</button>
+            <button onclick="Discount()">Discounted Fare</button>
             
             <h2>Ticket Price:</h2>
             <div id="ticketPrice">0.00</div>
         </div>
     </div>
 </body>
+
+<script>
+    function Fare() {
+        const baseFare = 13;
+        var origin = document.getElementById('leaving').value;
+        var destination = document.getElementById('going').value;
+
+        var fare = baseFare + (destination - origin); 
+        document.getElementById('ticketPrice').textContent = fare.toFixed(2)
+    }
+
+    function Discount() {
+        const baseFare = 13;
+        var origin = document.getElementById('leaving').value;
+        var destination = document.getElementById('going').value;
+
+        var regularFare = baseFare + (destination - origin); 
+        var discount = regularFare * 0.8;
+        document.getElementById('ticketPrice').textContent = discount.toFixed(2)
+    }
+</script>
+
 </html>
