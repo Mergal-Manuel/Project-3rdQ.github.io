@@ -1,4 +1,4 @@
-<script>
+
 function Fare() {
             const baseFare = 13;
             var origin = document.getElementById('leaving').value;
@@ -17,4 +17,3 @@ function Fare() {
             var discount = regularFare * 0.8;
             document.getElementById('ticketPrice').textContent = discount.toFixed(2);
         }
-    </script>
