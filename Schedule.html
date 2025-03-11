@@ -5,124 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MRT-3 Schedule: North Avenue to Taft Avenue</title>
     <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f8f9fa;
-            padding: 20px;
-        }
-        .schedule-table {
-            margin: 0 auto;
-            max-width: 800px;
-        }
-        .schedule-table th, .schedule-table td {
-            text-align: center;
-        }
-        .station-name {
-            text-align: left;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="text-center mb-4">MRT-3 Schedule: North Avenue to Taft Avenue</h1>
-        <table class="table table-bordered table-hover schedule-table">
-            <thead class="thead-dark">
-                <tr>
-                    <th>Station</th>
-                    <th>First Train Departure (Weekdays)</th>
-                    <th>Last Train Departure (Weekdays)</th>
-                    <th>First Train Departure (Weekends & Holidays)</th>
-                    <th>Last Train Departure (Weekends & Holidays)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="station-name">North Avenue</td>
-                    <td>4:36 AM</td>
-                    <td>9:30 PM</td>
-                    <td>4:38 AM</td>
-                    <td>9:30 PM</td>
-                </tr>
-                <tr>
-                    <td class="station-name">Quezon Avenue</td>
-                    <td>4:39 AM</td>
-                    <td>9:33 PM</td>
-                    <td>4:41 AM</td>
-                    <td>9:33 PM</td>
-                </tr>
-                <tr>
-                    <td class="station-name">GMA-Kamuning</td>
-                    <td>4:42 AM</td>
-                    <td>9:36 PM</td>
-                    <td>4:44 AM</td>
-                    <td>9:36 PM</td>
-                </tr>
-                <tr>
-                    <td class="station-name">Araneta Center-Cubao</td>
-                    <td>4:45 AM</td>
-                    <td>9:39 PM</td>
-                    <td>4:47 AM</td>
-                    <td>9:39 PM</td>
-                </tr>
-                <tr>
-                    <td class="station-name">Santolan-Annapolis</td>
-                    <td>4:48 AM</td>
-                    <td>9:42 PM</td>
-                    <td>4:50 AM</td>
-                    <td>9:42 PM</td>
-                </tr>
-                <tr>
-                    <td class="station-name">Ortigas</td>
-                    <td>4:51 AM</td>
-                    <td>9:45 PM</td>
-                    <td>4:53 AM</td>
-                    <td>9:45 PM</td>
-                </tr>
-                <tr>
-                    <td class="station-name">Shaw Boulevard</td>
-                    <td>4:54 AM</td>
-                    <td>9:48 PM</td>
-                    <td>4:56 AM</td>
-                    <td>9:48 PM</td>
-                </tr>
-                <tr>
-                    <td class="station-name">Boni Avenue</td>
-                    <td>4:57 AM</td>
-                    <td>9:51 PM</td>
-                    <td>4:59 AM</td>
-                    <td>9:51 PM</td>
-                </tr>
-                <tr>
-                    <td class="station-name">Guadalupe</td>
-                    <td>5:00 AM</td>
-                    <td>9:54 PM</td>
-                    <td>5:02 AM</td>
-                    <td>9:54 PM</td>
-                </tr>
-                <tr>
-                    <td class="station-name">Buendia</td>
-                    <td>5:03 AM</td>
-                    <td>9:57 PM</td>
-                    <td>5:05 AM</td>
-                    <td>9:57 PM</td>
-                </tr>
-                <tr>
-                    <td class="station-name">Ayala</td>
-                    <td>5:06 AM</td>
-                    <td>10:00 PM</td>
-                    <td>5:08 AM</td>
-                    <td>10:00 PM</td>
-                </tr>
-                <tr>
-                    <td class="station-name">Magallanes</td>
-                    <td>5:09 AM</td>
-                    <td>10:03 PM</td>
-                    <td>5:11 AM</td>
-                    <td>10:03 PM</td>
-                </tr>
-                <tr>
-                    <td class="station-name">Taft Avenue</td>
-                    <td>5:12 AM</td>
- 
-::contentReference[oaicite:2]{index=2}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <div class="navbar-nav">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="schedule.html">Train Schedule</a>
+                <a class="nav-link" href="contact.html">Help</a>
+            </div>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
+                <button class="btn btn-light" type="submit">🔍</button>
+            </form>
+        </div>
+    </nav>
+   
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">MRT-3 Operating Hours</h1>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover text-center">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Station</th>
+                        <th>Monday - Sunday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>North Avenue</td><td>4:36 AM - 9:30 PM</td></tr>
+                    <tr><td>Quezon Avenue</td><td>4:39 AM - 9:33 PM</td></tr>
+                    <tr><td>GMA-Kamuning</td><td>4:42 AM - 9:36 PM</td></tr>
+                    <tr><td>Araneta Center-Cubao</td><td>4:45 AM - 9:39 PM</td></tr>
+                    <tr><td>Santolan-Annapolis</td><td>4:48 AM - 9:42 PM</td></tr>
+                    <tr><td>Ortigas</td><td>4:51 AM - 9:45 PM</td></tr>
+                    <tr><td>Shaw Boulevard</td><td>4:54 AM - 9:48 PM</td></tr>
+                    <tr><td>Boni Avenue</td><td>4:57 AM - 9:51 PM</td></tr>
+                    <tr><td>Guadalupe</td><td>5:00 AM - 9:54 PM</td></tr>
+                    <tr><td>Buendia</td><td>5:03 AM - 9:57 PM</td></tr>
+                    <tr><td>Ayala</td><td>5:06 AM - 10:00 PM</td></tr>
+                    <tr><td>Magallanes</td><td>5:09 AM - 10:03 PM</td></tr>
+                    <tr><td>Taft Avenue</td><td>5:12 AM - 10:06 PM</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer class="footer bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2025 Pontillas, Mergal</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
