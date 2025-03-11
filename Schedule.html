@@ -3,139 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LRT Line 1 Schedule: Roosevelt to Baclaran</title>
+    <title>MRT-3 Schedule: North Avenue to Taft Avenue</title>
+    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    
-        
-   </head>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .schedule-table {
+            margin: 0 auto;
+            max-width: 800px;
+        }
+        .schedule-table th, .schedule-table td {
+            text-align: center;
+        }
+        .station-name {
+            text-align: left;
+        }
+    </style>
+</head>
 <body>
     <div class="container">
-        <h1 class="text-center mb-4">LRT Line 1 Schedule: Roosevelt to Baclaran</h1>
+        <h1 class="text-center mb-4">MRT-3 Schedule: North Avenue to Taft Avenue</h1>
         <table class="table table-bordered table-hover schedule-table">
             <thead class="thead-dark">
                 <tr>
                     <th>Station</th>
-                    <th>First Train Departure</th>
+                    <th>First Train Departure (Weekdays)</th>
                     <th>Last Train Departure (Weekdays)</th>
+                    <th>First Train Departure (Weekends & Holidays)</th>
                     <th>Last Train Departure (Weekends & Holidays)</th>
                 </tr>
             </thead>
             <tbody>
-                  <tr>
-                      <td class="station-name">Roosevelt</td>
-                      <td>5:00 AM</td>
-                      <td>10:00 PM</td>
-                      <td>9:30 PM</td>
-                  </tr>
-                  <tr>
-                      <td class="station-name">Balintawak</td>
-                      <td>5:04 AM</td>
-                      <td>10:04 PM</td>
-                      <td>9:34 PM</td>
-                  </tr>
-                  <tr>
-                        <td class="station-name">Monumento</td>
-                         <td>5:08 AM</td>
-                         <td>10:08 PM</td>
-                         <td>9:38 PM</td>
-                     </tr>
                 <tr>
-                    <td class="station-name">5th Avenue</td>
-                    <td>5:12 AM</td>
-                    <td>10:12 PM</td>
+                    <td class="station-name">North Avenue</td>
+                    <td>4:36 AM</td>
+                    <td>9:30 PM</td>
+                    <td>4:38 AM</td>
+                    <td>9:30 PM</td>
+                </tr>
+                <tr>
+                    <td class="station-name">Quezon Avenue</td>
+                    <td>4:39 AM</td>
+                    <td>9:33 PM</td>
+                    <td>4:41 AM</td>
+                    <td>9:33 PM</td>
+                </tr>
+                <tr>
+                    <td class="station-name">GMA-Kamuning</td>
+                    <td>4:42 AM</td>
+                    <td>9:36 PM</td>
+                    <td>4:44 AM</td>
+                    <td>9:36 PM</td>
+                </tr>
+                <tr>
+                    <td class="station-name">Araneta Center-Cubao</td>
+                    <td>4:45 AM</td>
+                    <td>9:39 PM</td>
+                    <td>4:47 AM</td>
+                    <td>9:39 PM</td>
+                </tr>
+                <tr>
+                    <td class="station-name">Santolan-Annapolis</td>
+                    <td>4:48 AM</td>
+                    <td>9:42 PM</td>
+                    <td>4:50 AM</td>
                     <td>9:42 PM</td>
                 </tr>
                 <tr>
-                    <td class="station-name">R. Papa</td>
-                    <td>5:16 AM</td>
-                    <td>10:16 PM</td>
-                    <td>9:46 PM</td>
+                    <td class="station-name">Ortigas</td>
+                    <td>4:51 AM</td>
+                    <td>9:45 PM</td>
+                    <td>4:53 AM</td>
+                    <td>9:45 PM</td>
                 </tr>
                 <tr>
-                    <td class="station-name">Abad Santos</td>
-                    <td>5:20 AM</td>
-                    <td>10:20 PM</td>
-                    <td>9:50 PM</td>
+                    <td class="station-name">Shaw Boulevard</td>
+                    <td>4:54 AM</td>
+                    <td>9:48 PM</td>
+                    <td>4:56 AM</td>
+                    <td>9:48 PM</td>
                 </tr>
                 <tr>
-                    <td class="station-name">Blumentritt</td>
-                    <td>5:24 AM</td>
-                    <td>10:24 PM</td>
+                    <td class="station-name">Boni Avenue</td>
+                    <td>4:57 AM</td>
+                    <td>9:51 PM</td>
+                    <td>4:59 AM</td>
+                    <td>9:51 PM</td>
+                </tr>
+                <tr>
+                    <td class="station-name">Guadalupe</td>
+                    <td>5:00 AM</td>
+                    <td>9:54 PM</td>
+                    <td>5:02 AM</td>
                     <td>9:54 PM</td>
                 </tr>
                 <tr>
-                    <td class="station-name">Tayuman</td>
-                    <td>5:28 AM</td>
-                    <td>10:28 PM</td>
-                    <td>9:58 PM</td>
+                    <td class="station-name">Buendia</td>
+                    <td>5:03 AM</td>
+                    <td>9:57 PM</td>
+                    <td>5:05 AM</td>
+                    <td>9:57 PM</td>
                 </tr>
                 <tr>
-                    <td class="station-name">Bambang</td>
-                    <td>5:32 AM</td>
-                    <td>10:32 PM</td>
-                    <td>10:02 PM</td>
+                    <td class="station-name">Ayala</td>
+                    <td>5:06 AM</td>
+                    <td>10:00 PM</td>
+                    <td>5:08 AM</td>
+                    <td>10:00 PM</td>
                 </tr>
                 <tr>
-                    <td class="station-name">Doroteo Jose</td>
-                    <td>5:36 AM</td>
-                    <td>10:36 PM</td>
-                    <td>10:06 PM</td>
+                    <td class="station-name">Magallanes</td>
+                    <td>5:09 AM</td>
+                    <td>10:03 PM</td>
+                    <td>5:11 AM</td>
+                    <td>10:03 PM</td>
                 </tr>
                 <tr>
-                    <td class="station-name">Carriedo</td>
-                    <td>5:40 AM</td>
-                    <td>10:40 PM</td>
-                    <td>10:10 PM</td>
-                </tr>
-                <tr>
-                    <td class="station-name">Central Terminal</td>
-                    <td>5:44 AM</td>
-                    <td>10:44 PM</td>
-                    <td>10:14 PM</td>
-                </tr>
-                <tr>
-                    <td class="station-name">United Nations</td>
-                    <td>5:48 AM</td>
-                    <td>10:48 PM</td>
-                    <td>10:18 PM</td>
-                </tr>
-                <tr>
-                    <td class="station-name">Pedro Gil</td>
-                    <td>5:52 AM</td>
-                    <td>10:52 PM</td>
-                    <td>10:22 PM</td>
-                </tr>
-                <tr>
-                    <td class="station-name">Quirino</td>
-                    <td>5:56 AM</td>
-                    <td>10:56 PM</td>
-                    <td>10:26 PM</td>
-                </tr>
-                <tr>
-                    <td class="station-name">Vito Cruz</td>
-                    <td>6:00 AM</td>
-                    <td>11:00 PM</td>
-                    <td>10:30 PM</td>
-                </tr>
-                <tr>
-                    <td class="station-name">Gil Puyat</td>
-                    <td>6:04 AM</td>
-                    <td>11:04 PM</td>
-                    <td>10:34 PM</td>
-                </tr>
-                <tr>
-                    <td class="station-name">Libertad</td>
-                    <td>6:08 AM</td>
-                    <td>11:08 PM</td>
-                    <td>10:38 PM</td>
-                </tr>
-                <tr>
-                    <td class="station-name">EDSA</td>
-                    <td>6:12 AM</td>
-                    <td>11:12 PM</td>
-                    <td>10:42 PM</td>
-                </tr>
-                <tr>
-                    <td class="station-name
-::contentReference[oaicite:1]{index=1}
+                    <td class="station-name">Taft Avenue</td>
+                    <td>5:12 AM</td>
  
+::contentReference[oaicite:2]{index=2}
